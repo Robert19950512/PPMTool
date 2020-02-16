@@ -39,6 +39,7 @@ class AddProjectTask extends Component {
       priority: this.state.priority,
       dueDate: this.state.dueDate
     };
+    console.log(newTask);
 
     this.props.addProjectTask(
       this.state.projectIdentifier,
@@ -102,10 +103,10 @@ class AddProjectTask extends Component {
                     value={this.state.priority}
                     onChange={this.onChange}
                   >
-                    <option value="{0}">Select Priority</option>
-                    <option value="{1}">High</option>
-                    <option value="{2}">Medium</option>
-                    <option value="{3}">Low</option>
+                    <option value="0">Select Priority</option>
+                    <option value="1">High</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Low</option>
                   </select>
                 </div>
 
