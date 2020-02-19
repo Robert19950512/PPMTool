@@ -59,7 +59,7 @@ public class UserController {
         return ResponseEntity.ok(new JWTLoginSuccessResponse(true, jwt));
     }
     @PostMapping("/register")
-    public ResponseEntity<?> registerUaer(@Valid @RequestBody User user, BindingResult result) {
+    public ResponseEntity<?> registerUser(@Valid @RequestBody User user, BindingResult result) {
         // validate passwords match
         userValidator.validate(user, result);
         ResponseEntity<?> errorMap = mapValidationErrorService.MapValidationService(result);
